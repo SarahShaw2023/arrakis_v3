@@ -31,7 +31,17 @@ public class BondsServiceTest {
 
     @Test
     public void get_bonds_by_maturity() {
-
-        // arrange
+//        Date currentDate = new date();
+//        Bond bond;
+//        bond = new Bond();
+//        bond.setBondMaturity(new SimpleDateFormat("yyyy-mm-dd").format(new Date(currentDate));
+//
+//
+//        // arrange
+//
+//        //act
+//
+//        //assert
+//        assertEquals(null,actualBonds);
     }
 }

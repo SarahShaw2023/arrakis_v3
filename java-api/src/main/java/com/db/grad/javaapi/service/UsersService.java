@@ -16,4 +16,12 @@ public class UsersService {
     public List<User> getAllUsers() {
         return usersRepository.findAll();
     }
+//    public String getEmail(String user){
+//        return usersRepository.getEmail(user);
+//
+//    }
+//    public List<User> PostUser(){
+//
+//    }
+
 }
