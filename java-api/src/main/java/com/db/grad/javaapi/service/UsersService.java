@@ -16,12 +16,7 @@ public class UsersService {
     public List<User> getAllUsers() {
         return usersRepository.findAll();
     }
-//    public String getEmail(String user){
-//        return usersRepository.getEmail(user);
-//
-//    }
-//    public List<User> PostUser(){
-//
-//    }
+    public List<User>  getUserByEmail(String email){return usersRepository.getUserByEmail(email);}
+    public List<User> getUserByUsername(String username){return usersRepository.getUserByUserName(username);}
 
 }

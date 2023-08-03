@@ -20,9 +20,9 @@ public class UsersController {
     public List<User> getAllUsers() {
         return usersService.getAllUsers();
     }
-//    @GetMapping('/users/{user}')
-//    public String getEmail(@PathVariable  String user){
-//        return usersService.getEmail(user);
+//    @GetMapping('/{email}')
+//    public String getEmail(@PathVariable  String email){
+//        return usersService.getUserByEmail(email);
 //    }
 
 }
