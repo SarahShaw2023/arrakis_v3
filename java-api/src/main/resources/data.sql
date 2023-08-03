@@ -17,7 +17,7 @@ VALUES
     (4.37, 'USD', '', 1000, 'XS1988387210', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '05/08/2021', 'active', 'CORP'),
     (0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460513', 'HM Treasury United Kingdon', '09/08/2021', 'active', 'GOVN'),
     (0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460506', 'HM Treasury United Kingdon', '09/08/2021', 'active', 'GOVN'),
-    (0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460511', 'HM Treasury United Kingdon', '09/08/2021', 'active', 'GOVN'),
+    (0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460511', 'HM Treasury United Kingdon', '09/08/2021', 'active', 'GOVN');
 
 INSERT INTO users
     (name, email, role)
