@@ -12,8 +12,7 @@ public class Bond {
     @Id
     private String isin;
     private float couponPercent, faceValue;
-    private String cusip, issuerName, type, bondCurrency, status;
-    private Date bondMaturity;
+    private String cusip, issuerName, type, bondCurrency, bondMaturity, status;
 
     public String getIsin() {
         return isin;
@@ -55,11 +54,11 @@ public class Bond {
         this.cusip = cusip;
     }
 
-    public Date getBondMaturity() {
+    public String getBondMaturity() {
         return bondMaturity;
     }
 
-    public void setBondMaturity(Date bondMaturity) {
+    public void setBondMaturity(String bondMaturity) {
         this.bondMaturity = bondMaturity;
     }
 

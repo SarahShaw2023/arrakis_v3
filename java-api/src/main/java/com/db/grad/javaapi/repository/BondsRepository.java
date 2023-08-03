@@ -12,7 +12,7 @@ public interface BondsRepository extends JpaRepository<Bond, String>  {
     @Query(nativeQuery = true, value = "select * from bonds where isin = :isin")
     List<Bond> findByISIN(String isin);
 
-    @Query(nativeQuery = true, value = "select * from bonds where abs(datediff(day, current_date, bond_maturity)) <= 5")
+    @Query(nativeQuery = true, value = "select * from bonds where abs(datediff(day, parsedatetime(current_date, 'DD/MM/yyyy'))) <= 7")
     List<Bond> findByMaturity();
 }
 
