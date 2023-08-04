@@ -1,5 +1,7 @@
+import {signInWithEmailAndPassword} from "firebase/auth";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import auth from "../firebase"
 
 const Login = (props) => {
     const [email, setEmail] = useState("")
@@ -10,6 +12,12 @@ const Login = (props) => {
     const navigate = useNavigate();
         
     const onButtonClick = () => {
+        signInWithEmailAndPassword(auth,email,password)
+        .then((userCredential)=> {
+            navigate("/Bonds");})
+         .catch((error) => {
+        console.log(error)
+        })
         setEmailError("")
         setPasswordError("")
 
