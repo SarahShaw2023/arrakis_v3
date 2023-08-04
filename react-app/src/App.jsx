@@ -1,23 +1,19 @@
 import React from "react";
 import "./App.css";
-import { Bonds } from "./components/Bonds";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/home';
-import Login from './components/login';
 import { useState } from 'react';
+import Home from "./components/Home";
+import Login from "./components/Login";
 
 const App = () => {
-  // return <Bonds />;
-  const [loggedIn, setLoggedIn] = useState(false)
-  const [email, setEmail] = useState("")
+  const [userID, setUserID] = useState(0)
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home email={email} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} setEmail={setEmail} />} />
-          <Route path="/Bonds" element={<Bonds/>} />
+          <Route path="/login" element={<Login userID={userID} setUserID={setUserID} />} />
+          <Route path="/home" element={<Home userID={userID} setUserID={setUserID} />} />
         </Routes>
       </BrowserRouter>
     </div>);

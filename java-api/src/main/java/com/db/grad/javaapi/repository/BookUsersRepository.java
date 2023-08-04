@@ -12,4 +12,7 @@ import java.util.List;
 public interface BookUsersRepository extends JpaRepository<BookUser, Integer> {
     @Query(nativeQuery = true, value = "select * from book_users")
     List<BookUser> getBookUsers();
+
+    @Query(nativeQuery = true, value = "select book_id from book_users as bu where bu.user_id = :userID")
+    List<Integer> getBookIDsByUserID(int userID);
 }

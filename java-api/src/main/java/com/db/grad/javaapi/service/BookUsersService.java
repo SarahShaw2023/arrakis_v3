@@ -17,4 +17,8 @@ public class BookUsersService {
     public List<BookUser> getAllBookUsers() {
         return bookUsersRepository.findAll();
     }
+
+    List<Integer> getBookIDsByUserID(int userID) {
+        return bookUsersRepository.getBookIDsByUserID(userID);
+    }
 }

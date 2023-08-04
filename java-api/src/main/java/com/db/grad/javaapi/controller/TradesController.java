@@ -5,9 +5,7 @@ import com.db.grad.javaapi.model.Trade;
 import com.db.grad.javaapi.service.BooksService;
 import com.db.grad.javaapi.service.TradesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +16,7 @@ public class TradesController {
     TradesService tradesService;
 
     @GetMapping("/trades")
-    public List<Trade> getAllTrades() {
-        return tradesService.getAllTrades();
+    public List<Trade> getTradesByUser(@RequestParam("userID") int userID) {
+        return tradesService.getTradesByUserID(userID);
     }
 }

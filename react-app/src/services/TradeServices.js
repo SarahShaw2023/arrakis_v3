@@ -9,8 +9,8 @@ export function getAllBonds(){
 export function getAllBondsMaturity(date){
   return http.get("/bonds/maturity?date=" + date.toISOString().split('T')[0]);
 }
-export function getAllTrades(){
-  return http.get("/trades");
+export function getAllTrades(userID){
+  return http.get("/trades?userID=" + userID);
 }
 
 // export const findBonds = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = (props) => {
+const Login = ({userID, setUserID}) => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [emailError, setEmailError] = useState("")
@@ -36,7 +36,8 @@ const Login = (props) => {
 
         // Authentication calls will be made here...
         if (email === "admin@mail.com" && password === "admin2023") {
-            navigate("/Bonds")
+            setUserID(0)
+            navigate("/home")
         }
     }
 
