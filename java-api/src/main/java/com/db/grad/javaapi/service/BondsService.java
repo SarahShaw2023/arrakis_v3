@@ -23,8 +23,8 @@ public class BondsService {
 
         return bondsRepository.findAll();
     }
-    public List<Bond> getBondsByMaturity(String date) {
-
+    public List<Bond> getBondsByMaturity(Date date) {
+        System.out.println(date);
         return bondsRepository.findByMaturity(date);
     }
 

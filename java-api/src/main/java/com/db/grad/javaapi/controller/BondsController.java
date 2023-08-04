@@ -24,6 +24,6 @@ public class BondsController {
     }
     @GetMapping("/bonds/maturity")
     public List<Bond> getBondsByMaturity(@RequestParam("date") String date){
-        return bondsService.getBondsByMaturity(date);
+        return bondsService.getBondsByMaturity(Date.valueOf(date));
     }
 }
