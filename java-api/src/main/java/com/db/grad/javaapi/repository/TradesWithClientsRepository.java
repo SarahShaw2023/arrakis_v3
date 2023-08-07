@@ -1,5 +1,6 @@
 package com.db.grad.javaapi.repository;
 
+import com.db.grad.javaapi.model.Trade;
 import com.db.grad.javaapi.model.TradeWithClient;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,4 +13,7 @@ public interface TradesWithClientsRepository extends ReadOnlyRepository<TradeWit
     //Views need custom query
     @Query(nativeQuery = true, value = "select * from tradesWithClients")
     List<TradeWithClient> findAll();
+
+    @Query(nativeQuery = true, value = "select * from tradesWithClients as t where t.book_id = :book_id")
+    List<TradeWithClient> getTradesWithClientsByBookID(int book_id);
 }

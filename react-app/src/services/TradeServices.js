@@ -15,6 +15,10 @@ export function getAllTrades(userID){
   return http.get("/trades?userID=" + userID);
 }
 
+export function getAllTradesWithClients(userID){
+  return http.get("/tradesWithClients/user?userID=" + userID);
+}
+
 export function updateUser(email, username, password){
   return http.put("/updateUser?" + "email=" + email + 
                                  "&username=" + username + 

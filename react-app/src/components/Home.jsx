@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAllBonds, getAllBondsMaturity, getAllTrades } from '../services/TradeServices';
+import { getAllBonds, getAllBondsMaturity, getAllTrades, getAllTradesWithClients } from '../services/TradeServices';
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css'
@@ -45,7 +45,8 @@ export const Home = ({userID, setUserID}) => {
         })
     }
     const getTradesFromAPI = ()=>{
-        getAllTrades(userID)
+        //getAllTrades(userID)
+        getAllTradesWithClients(userID)
             .then(res => {
                 console.log(res.data);
                 setTrades(res.data);
@@ -78,7 +79,8 @@ export const Home = ({userID, setUserID}) => {
         return <tr>
             <td>{data.book_id}</td>
             <td>{data.bond_id}</td>
-            <td>{data.counterparty_id}</td>
+            <td>{data.clientId}</td>
+            <td>{data.clientName}</td>
             <td>{data.quantity}</td>
             <td>{data.currency}</td>
             <td>{statusCheck(data.status)}</td>
@@ -125,13 +127,14 @@ export const Home = ({userID, setUserID}) => {
     <div>
         <table>
             <thead>
-                <tr><th colSpan="10">Trades Linked to Account</th></tr>
+                <tr><th colSpan="11">All Trades</th></tr>
             </thead>
             <tbody>
                 <tr>
                     <th>Book ID</th>
                     <th>Bond ID</th>
-                    <th>Counterparty ID</th>
+                    <th>Client ID</th>
+                    <th>Client Name</th>
                     <th>Quantity</th>
                     <th>Currency</th>
                     <th>Status</th>
