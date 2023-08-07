@@ -104,9 +104,8 @@ export const Home = ({userID, setUserID}) => {
         </tr>
     }
     const onLogoutClick = () => {
-        // navigate("/home");
-        window.location.replace('/home');
-        // TODO: clear out/reset user login info
+        setUserID(0)
+        navigate("/login");
     }
   return (
     <>
