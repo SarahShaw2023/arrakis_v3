@@ -14,6 +14,6 @@ public interface TradesWithClientsRepository extends ReadOnlyRepository<TradeWit
     @Query(nativeQuery = true, value = "select * from tradesWithClients")
     List<TradeWithClient> findAll();
 
-    @Query(nativeQuery = true, value = "select * from trades as t where t.book_id = :book_id")
+    @Query(nativeQuery = true, value = "select * from tradesWithClients as t where t.book_id = :book_id")
     List<TradeWithClient> getTradesWithClientsByBookID(int book_id);
 }

@@ -79,8 +79,8 @@ export const Home = ({userID, setUserID}) => {
         return <tr>
             <td>{data.book_id}</td>
             <td>{data.bond_id}</td>
-            <td>{data.client_id}</td>
-            <td>{data.client_name}</td>
+            <td>{data.clientId}</td>
+            <td>{data.clientName}</td>
             <td>{data.quantity}</td>
             <td>{data.currency}</td>
             <td>{statusCheck(data.status)}</td>
@@ -127,7 +127,7 @@ export const Home = ({userID, setUserID}) => {
     <div>
         <table>
             <thead>
-                <tr><th colSpan="10">All Trades</th></tr>
+                <tr><th colSpan="11">All Trades</th></tr>
             </thead>
             <tbody>
                 <tr>
