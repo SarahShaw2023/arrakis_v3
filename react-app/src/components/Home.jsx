@@ -62,7 +62,20 @@ export const Home = ({userID, setUserID}) => {
         }
         return status;
     }
-    const createBondRow = (data) => {     
+    const createBondRowByISIN = (data) => {     
+        return <tr>
+            <td>{data.isin}</td>
+            <td>{data.couponPercent}</td>
+            <td>{data.bondCurrency}</td>
+            <td>{data.cusip}</td>
+            <td>{data.faceValue}</td>
+            <td>{data.issuerName}</td>
+            <td>{data.bondMaturity}</td>
+            <td>{statusCheck(data.status)}</td>
+            <td>{data.type}</td>
+        </tr>
+    }
+    const createBondRowByMaturity = (data) => {     
         return <tr>
             <td>{data.bondMaturity}</td>
             <td>{data.couponPercent}</td>
@@ -107,17 +120,17 @@ export const Home = ({userID, setUserID}) => {
             </thead>
             <tbody>
                 <tr>
+                    <th>ISIN</th>
                     <th>Coupon Percent</th>
                     <th>Bond Currency</th>
                     <th>CUSIP</th>
                     <th>Face Value</th>
-                    <th>ISIN</th>
                     <th>Issuer Name</th>
                     <th>Bond Maturity</th>
                     <th>Status</th>
                     <th>Type</th>
                 </tr>
-                {bonds.map(row => createBondRow(row))}
+                {bonds.map(row => createBondRowByISIN(row))}
             </tbody>
             
         </table>
@@ -170,7 +183,7 @@ export const Home = ({userID, setUserID}) => {
                 <th>Status</th>
                 <th>Type</th>
             </tr>
-            {bondsMaturity.map(row => createBondRow(row))}
+            {bondsMaturity.map(row => createBondRowByMaturity(row))}
         </tbody>
         
     </table>
