@@ -38,7 +38,10 @@ const Login = ({userID, setUserID}) => {
             .then(res => {
                 console.log("Login response: " + res.data);
                 setUserID(res.data);
+
+                // window.location.replace('/home');
                 navigate("/home")
+                
             })
             .catch(err => {
                 console.log("Login error response: " + err);

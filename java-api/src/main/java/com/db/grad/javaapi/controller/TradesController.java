@@ -15,6 +15,11 @@ public class TradesController {
     @Autowired
     TradesService tradesService;
 
+    @GetMapping("/tradesAll")
+    public List<Trade> getAllTrades() {
+        return tradesService.getAllTrades();
+    }
+
     @GetMapping("/trades")
     public List<Trade> getTradesByUser(@RequestParam("userID") int userID) {
         return tradesService.getTradesByUserID(userID);

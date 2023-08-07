@@ -40,6 +40,11 @@ const AccountCreation = () => {
                 let result = res.data; //bool
 
                 if(result) {
+                    setEmail("");
+                    setRole("");
+                    setUsername("");
+                    setPassword("");
+
                     setAccCreateMsg("Account successfully made. Redirecting to login page in 3 seconds...")
                     setTimeout(function() {
                         window.location.replace('/login');

@@ -104,14 +104,14 @@ export const Home = ({userID, setUserID}) => {
         </tr>
     }
     const onLogoutClick = () => {
-        // navigate("/");
+        // navigate("/home");
         window.location.replace('/home');
         // TODO: clear out/reset user login info
     }
   return (
     <>
-    <div class="align-right">
-        <input type="button" onClick={onLogoutClick} value={"Logout"} class="right" />
+    <div className={"align-right"}>
+        <input type="button" onClick={onLogoutClick} value={"Logout"} className={"right"} />
       </div>
     <div>
         <table>
@@ -136,7 +136,7 @@ export const Home = ({userID, setUserID}) => {
         </table>
         
     </div>
-    <div class="space"></div>
+    <div className={"space"}></div>
     <div>
         <table>
             <thead>
@@ -162,7 +162,7 @@ export const Home = ({userID, setUserID}) => {
         </table>
         
     </div>
-    <div class="space"></div>
+    <div className={"space"}></div>
     <div>
       <DatePicker dateFormat="dd/MM/yyyy" selected={date} onChange={(d) => {console.log(d.toISOString().split('T')[0]); setDate(d)}} />
     </div>
@@ -189,7 +189,7 @@ export const Home = ({userID, setUserID}) => {
     </table>
 
     </div> 
-    <div class="space"></div>
+    <div className={"space"}></div>
     </>
   )
 }
