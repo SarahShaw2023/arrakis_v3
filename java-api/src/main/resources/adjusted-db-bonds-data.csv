@@ -1,0 +1,31 @@
+,trade_type,trade_currency,quantity,trade_settlement_date,trade_status,trade_date,unit_price,coupon_percent,bond_currency,cusip,face_value (mn),isin,issuer_name,bond_maturity_date,status,type,book_name,bond_holder
+0,buy,USD,50.0,2021-04-08,open,2021-05-13,90.0,4.37,USD,,1000.0,XS1988387210,"BNPParibasIssu 4,37% Microsoft Corp (USD)",2021-05-08,active,CORP,trading_book_1,AZ Holdings Inc
+1,sell,GBP,40.0,2021-04-08,open,2021-04-02,89.56,4.37,USD,,1000.0,XS1988387210,"BNPParibasIssu 4,37% Microsoft Corp (USD)",2021-05-08,active,CORP,trading_book_1,AZ Holdings Inc
+2,buy,USD,1000.0,2021-08-23,open,2021-05-13,105.775,3.15,USD,123456780,900.0,USN0280EAR64,Airbus 3.15%  USD,2021-07-30,active,CORP,trading_book_2,Acme co
+3,sell,GBP,900.0,2021-10-09,open,2021-04-02,105.775,3.15,USD,123456780,900.0,USN0280EAR64,Airbus 3.15%  USD,2021-07-30,active,CORP,trading_book_2,Acme Co
+4,buy,USD,50.0,2021-08-23,open,2021-05-13,90.0,2,USD,123456bh0,900.0,A12356111,UBS Facebook (USD),2021-09-30,active,CORP,Trading_book_3,Sovereign Investments
+5,buy,USD,1000.0,2021-08-23,open,2021-05-13,105.775,3.15,USD,123456780,900.0,USN0280EAR64,Airbus 3.15%  USD,2021-07-30,active,CORP,trading_book_2,Astra Trading Ltd
+6,sell,USD,50.0,2021-08-23,open,2021-05-13,90.0,2,USD,123456bh0,900.0,A12356111,UBS Facebook (USD),2021-09-30,active,CORP,Trading_book_2,Sovereign Investments
+7,buy,GBP,60.0,2021-09-27,open,2021-04-02,98.56,3.15,USD,AMZN 3.15 08/22/27 REGS,900.0,USU02320AG12,Amazon,2021-03-08,active,CORP,Trading_book_4,Muncipal Gov Of Orange County
+8,buy,USD,50.0,2021-08-23,open,2021-08-23,98.56,3.15,USD,AMZN 3.15 08/22/27 REGS,900.0,USU02320AG12,Amazon,2021-03-08,active,CORP,Trading_book_4,Muncipal Gov Of Orange County
+9,buy,GBP,1100.0,2021-09-27,open,2021-09-27,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460505,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Goldman Sachs
+10,sell,GBP,900.0,2021-09-28,open,2021-09-28,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460506,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Goldman Sachs
+11,buy,GBP,2000.0,2021-09-29,open,2021-09-29,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460507,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,UBS
+12,sell,GBP,2000.0,2021-09-30,open,2021-09-30,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460508,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,UBS
+13,buy,GBP,1000.0,2021-01-10,open,2021-01-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460509,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Barclays
+14,buy,GBP,900.0,2019-02-10,open,2019-02-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460510,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Barclays
+15,sell,GBP,1900.0,2019-03-10,open,2019-03-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460511,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Barclays
+16,buy,GBP,600.0,2018-04-10,open,2018-04-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460512,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,British Telecom
+17,buy,GBP,600.0,2019-05-10,open,2019-05-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460513,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Pension Holdings
+18,buy,GBP,700.0,2021-06-06,open,2021-06-06,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460514,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Pension Holdings
+19,sell,GBP,1300.0,2021-07-10,open,2011-07-10,110.35,0.75,GBP,BDCHBW8,900.0,GB00B6460515,HM Treasury United Kingdon,2021-09-08,active,GOVN,Trading_book_6,Pension Holdings
+20,buy,USD,60.0,2021-09-27,open,2012-04-02,100.13,2.02,USD,87973RAA8,690.0,US87973RAA86,TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S,2021-06-08,active,SOVN,Trading_book_4,Zurich Pension fund 4
+21,buy,USD,50.0,2021-08-23,open,2012-08-23,100.13,2.02,USD,87973RAA8,690.0,US87973RAA86,TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S,2021-06-08,active,SOVN,Trading_book_4,Zurich Pension fund 4
+22,buy,USD,75.0,2021-09-27,open,2013-04-02,100.13,2.02,USD,87973RAA8,690.0,US87973RAA86,TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S,2021-06-08,active,SOVN,Trading_book_4,Zurich Pension fund 4
+23,buy,USD,50.0,2021-08-23,open,2014-08-23,100.13,2.02,USD,87973RAA8,690.0,US87973RAA86,TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S,2021-06-08,active,SOVN,Trading_book_4,Zurich Pension fund 4
+24,buy,USD,300.0,2021-09-27,open,2016-04-02,98.76,1.123,USD,87973RAA8,340.0,IE00B29LNP31,First Norway Alpha Kl.IV,2030-12-22,active,SOVN,Trading_book_4,Zurich Pension fund 4
+25,buy,USD,300.0,2021-08-23,open,2012-08-23,98.76,1.123,USD,87973RAA8,340.0,IE00B29LNP31,First Norway Alpha Kl.IV,2030-12-22,active,SOVN,Trading_book_4,Zurich Pension fund 4
+26,buy,USD,300.0,2021-09-27,open,2013-04-02,98.76,1.123,USD,87973RAA8,340.0,IE00B29LNP31,First Norway Alpha Kl.IV,2030-12-22,active,SOVN,Trading_book_4,Zurich Pension fund 4
+27,sell,USD,300.0,2021-08-23,open,2015-08-23,98.76,1.123,USD,87973RAA8,340.0,IE00B29LNP31,First Norway Alpha Kl.IV,2030-12-22,active,SOVN,Trading_book_4,Zurich Pension fund 4
+28,,,,,,,,,,,,,,,,,,
+29,trade,,,,,,,bond/security,,,,primary key,,,,,counter party,
