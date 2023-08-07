@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {createAcc} from '../services/TradeServices'
+import {createAcc} from '../services/TradeServices';
+import {createUserWithEmailAndPassword} from 'firebase/auth';
+import {auth} from "../firebase"
 
 import CryptLogic from "../utils/crypt";
 
@@ -54,6 +56,13 @@ const AccountCreation = () => {
                 console.log("createAcc err: " + err);
                 setAccCreateMsg("An unexpected issue occured.\nPlease try again")
             });
+            // firebase
+//             createUserWithEmailAndPassword(auth,email,password)
+//                 .then ((userCredential) => {
+//                 console.log(error);
+//                 }.catch((error) =>{
+//                 console.log(error)
+//                 });
 
     }
 

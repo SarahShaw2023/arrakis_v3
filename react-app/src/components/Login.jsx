@@ -16,42 +16,46 @@ const Login = ({userID, setUserID}) => {
     const navigate = useNavigate();
         
     const onButtonClick = () => {
-         signInWithEmailAndPassword(auth,email,password)
-                 .then((userCredential)=> {
-                     navigate("/Bonds");})
+         signInWithEmailAndPassword(auth,username,password)
+            .then((res)=> {
+//                  console.log("Login response: " + res.data);
+//                  setUserID(res.userID);
+                 navigate("/home")
                   .catch((error) => {
-                 console.log(error)
+                  console.log("Login error response: " + err);
+                  setUserID(0);
                  })
+//           login(username, pwd)
+//                       .then(res => {
+//                           console.log("Login response: " + res.data);
+//                           setUserID(res.data);
+//                           navigate("/home");
+//                       })
+//                       .catch(err => {
+//                           console.log("Login error response: " + err);
+//                           setUserID(0);
+//                   })
         setUsernameError("")
         setPasswordError("")
 
-        if ("" === username) {
-            setUsernameError("please enter your username")
-            return
-        }
-
-        if (!/^[A-Za-z0-9]*$/.test(username)) {
-            setUsernameError("invalid username")
-            return
-        }
-
-        if ("" === password) {
-            setPasswordError("please enter your password")
-            return
-        }
+//         if ("" === username) {
+//             setUsernameError("please enter your username")
+//             return
+//         }
+//
+//         if (!/^[A-Za-z0-9]*$/.test(username)) {
+//             setUsernameError("invalid username")
+//             return
+//         }
+//
+//         if ("" === password) {
+//             setPasswordError("please enter your password")
+//             return
+//         }
 
         //Encrypt password
         let pwd = CryptLogic.encryptStr(password); //password
-        login(username, pwd)
-            .then(res => {
-                console.log("Login response: " + res.data);
-                setUserID(res.data);
-                navigate("/home")
-            })
-            .catch(err => {
-                console.log("Login error response: " + err);
-                setUserID(0);
-        })
+
     }
 
     return <div className={"mainContainer"}>

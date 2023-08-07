@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import
 import { useNavigate } from "react-router-dom";
 import {updateUser} from '../services/TradeServices'
 
