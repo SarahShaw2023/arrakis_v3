@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../services/TradeServices";
 import { Link } from "react-router-dom";
+// import Planet from "../venus.png"
 import CryptLogic from "../utils/crypt";
 
 const Login = ({userID, setUserID}) => {
@@ -47,9 +48,10 @@ const Login = ({userID, setUserID}) => {
 
     return <div className={"mainContainer"}>
         <div className={"titleContainer"}>
-            <div>Login</div>
+            <div>ARRAKIS</div>
         </div>
-        <br />
+        <div>Bond Management System</div>
+        <br /><br />
         <div className={"inputContainer"}>
             <input
                 value={username}

@@ -87,6 +87,10 @@ thead {
   justify-content: center;
 }
 
+.imgContainer {
+  height: 1em;
+}
+
 .resultContainer, .historyItem { 
   flex-direction: row;
   display: flex;

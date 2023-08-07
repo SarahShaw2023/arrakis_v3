@@ -63,13 +63,13 @@ export const Home = ({userID, setUserID}) => {
     }
     const createBondRow = (data) => {     
         return <tr>
+            <td>{data.bondMaturity}</td>
             <td>{data.couponPercent}</td>
             <td>{data.bondCurrency}</td>
             <td>{data.cusip}</td>
             <td>{data.faceValue}</td>
             <td>{data.isin}</td>
             <td>{data.issuerName}</td>
-            <td>{data.bondMaturity}</td>
             <td>{statusCheck(data.status)}</td>
             <td>{data.type}</td>
         </tr>
@@ -101,7 +101,7 @@ export const Home = ({userID, setUserID}) => {
     <div>
         <table>
             <thead>
-                <tr><th colSpan="9">All Bonds</th></tr>
+                <tr><th colSpan="9">Bond Overview</th></tr>
             </thead>
             <tbody>
                 <tr>
@@ -125,7 +125,7 @@ export const Home = ({userID, setUserID}) => {
     <div>
         <table>
             <thead>
-                <tr><th colSpan="10">All Trades</th></tr>
+                <tr><th colSpan="10">Trades Linked to Account</th></tr>
             </thead>
             <tbody>
                 <tr>
@@ -148,22 +148,22 @@ export const Home = ({userID, setUserID}) => {
     </div>
     <div class="space"></div>
     <div>
-      <DatePicker selected={date} onChange={(d) => {console.log(d.toISOString().split('T')[0]); setDate(d)}} />
+      <DatePicker dateFormat="dd/MM/yyyy" selected={date} onChange={(d) => {console.log(d.toISOString().split('T')[0]); setDate(d)}} />
     </div>
     <div>
     <table>
         <thead>
-            <tr><th colSpan="9">All Bonds Within 5 Days</th></tr>
+            <tr><th colSpan="9">View Bonds by Maturity</th></tr>
         </thead>
         <tbody>
             <tr>
+                <th>Bond Maturity</th>
                 <th>Coupon Percent</th>
                 <th>Bond Currency</th>
                 <th>CUSIP</th>
                 <th>Face Value</th>
                 <th>ISIN</th>
                 <th>Issuer Name</th>
-                <th>Bond Maturity</th>
                 <th>Status</th>
                 <th>Type</th>
             </tr>
