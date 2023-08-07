@@ -39,13 +39,18 @@ const Login = ({userID, setUserID}) => {
                 console.log("login response: " + res.data);
                 setUserID(res.data);
 
-                if(res.data <= 0)
-                    return
-                else
+                if(res.data == -1) {
+                    setUsernameError("username not found");
+                }
+                else if(res.data == 0) {
+                    setPasswordError("incorrect password");
+                }
+                else {
                     navigate("/home")
+                }
             })
             .catch(err => {
-                console.log("Login error response: " + err);
+                console.log("login error response: " + err);
                 setUserID(0);
         })
     }
