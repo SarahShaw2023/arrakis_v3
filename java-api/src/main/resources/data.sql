@@ -24,7 +24,7 @@ INSERT INTO users
 VALUES
     ('admin', 'totallySecurePWD','admin@email.com', 'CEO'),
     ('user1', 'user1PWD', 'user1@rdmAddress.com', 'Trader'),
-    ('two', '2', 'two@mail.com','Scrub');
+    ('two', 'two2two2', 'two@mail.com','Scrub');
 
 INSERT INTO books
     (name, id)

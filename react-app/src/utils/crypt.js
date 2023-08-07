@@ -1,4 +1,4 @@
-import Base64 from 'crypto-js/enc-base64';
+// import Base64 from 'crypto-js/enc-base64';
 import CryptoJS from 'crypto-js';
 
 class Crypt {

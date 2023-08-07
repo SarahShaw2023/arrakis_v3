@@ -8,12 +8,24 @@ public class User {
     @Id
     private int id;
     private String username;
+
+    public User() {
+    }
+
+    public User(String username, String password, String email, String role) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.role = role;
+    }
+
     private String password;
     private String email;
     private String role;
 
 //    @OneToMany(mappedBy = "User", targetEntity = BookUser.class, fetch = FetchType.EAGER)
 //    private Set<BookUser> bookUserSet;
+
 
     public int getId() {
         return id;
