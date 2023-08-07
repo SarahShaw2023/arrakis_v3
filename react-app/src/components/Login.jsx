@@ -4,6 +4,8 @@ import { login } from "../services/TradeServices";
 import { Link } from "react-router-dom";
 // import Planet from "../venus.png"
 import CryptLogic from "../utils/crypt";
+import {signInWithEmailAndPassword} from "firebase/auth";
+import auth from "../firebase"
 
 const Login = ({userID, setUserID}) => {
     const [username, setUsername] = useState("")
@@ -14,6 +16,12 @@ const Login = ({userID, setUserID}) => {
     const navigate = useNavigate();
         
     const onButtonClick = () => {
+         signInWithEmailAndPassword(auth,email,password)
+                 .then((userCredential)=> {
+                     navigate("/Bonds");})
+                  .catch((error) => {
+                 console.log(error)
+                 })
         setUsernameError("")
         setPasswordError("")
 
