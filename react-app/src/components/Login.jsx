@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../services/TradeServices";
 import { Link } from "react-router-dom";
+import CryptLogic from "../utils/crypt";
 
 const Login = ({userID, setUserID}) => {
     const [username, setUsername] = useState("")
@@ -30,7 +31,9 @@ const Login = ({userID, setUserID}) => {
             return
         }
 
-        login(username, password)
+        //Encrypt password
+        let pwd = CryptLogic.encryptStr(password); //password
+        login(username, pwd)
             .then(res => {
                 console.log("Login response: " + res.data);
                 setUserID(res.data);
