@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { login } from "../services/TradeServices";
 import { Link } from "react-router-dom";
 // import Planet from "../venus.png"
-import CryptLogic from "../utils/crypt";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import auth from "../firebase"
 
@@ -17,10 +15,9 @@ const Login = ({userID, setUserID}) => {
         
     const onButtonClick = () => {
          signInWithEmailAndPassword(auth,username,password)
-            .then((res)=> {
-//                  console.log("Login response: " + res.data);
-//                  setUserID(res.userID);
-                 navigate("/home")
+                 .then((user)=> {
+                    setUserID(user.uid);
+                    navigate("/home");})
                   .catch((error) => {
                   console.log("Login error response: " + err);
                   setUserID(0);
@@ -38,24 +35,33 @@ const Login = ({userID, setUserID}) => {
         setUsernameError("")
         setPasswordError("")
 
-//         if ("" === username) {
-//             setUsernameError("please enter your username")
-//             return
-//         }
-//
-//         if (!/^[A-Za-z0-9]*$/.test(username)) {
-//             setUsernameError("invalid username")
-//             return
-//         }
-//
-//         if ("" === password) {
-//             setPasswordError("please enter your password")
-//             return
-//         }
+        // if ("" === username) {
+        //     setUsernameError("please enter your username")
+        //     return
+        // }
 
-        //Encrypt password
-        let pwd = CryptLogic.encryptStr(password); //password
+        // if (!/^[A-Za-z0-9]*$/.test(username)) {
+        //     setUsernameError("invalid username")
+        //     return
+        // }
 
+        // if ("" === password) {
+        //     setPasswordError("please enter your password")
+        //     return
+        // }
+
+        // //Encrypt password
+        // let pwd = CryptLogic.encryptStr(password); //password
+        // login(username, pwd)
+        //     .then(res => {
+        //         console.log("Login response: " + res.data);
+        //         setUserID(res.data);
+        //         navigate("/home")
+        //     })
+        //     .catch(err => {
+        //         console.log("Login error response: " + err);
+        //         setUserID(0);
+        // })
     }
 
     return <div className={"mainContainer"}>
@@ -67,7 +73,7 @@ const Login = ({userID, setUserID}) => {
         <div className={"inputContainer"}>
             <input
                 value={username}
-                placeholder="username"
+                placeholder="email"
                 onChange={ev => setUsername(ev.target.value)}
                 className={"inputBox"} />
             <label className="errorLabel">{usernameError}</label>
@@ -92,16 +98,6 @@ const Login = ({userID, setUserID}) => {
         </div>
         {/* Reset password option */}
         <br />
-        <div className={"resetOption"}>
-            <Link to="/resetLogin">
-                Forgot Password?
-            </Link>
-        </div>
-        <div className={"resetOption"}>
-            <Link to="/createAccount">
-                Create New Account
-            </Link>
-        </div>
     </div>
 }
 
