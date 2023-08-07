@@ -22,9 +22,14 @@ VALUES
 INSERT INTO users
     (username, email, password, role)
 VALUES
-    ('admin', 'admin@mail.com', 'password', 'CEO'),
-    ('two', 'two@mail.com', '2', 'Scrub'),
-    ('user1', 'user1PWD', 'user1@rdmAddress.com', 'Trader');
+    --Password: password
+    ('admin', 'admin@mail.com', '/Eh8gAX4gQf8DHOul8A3Uw==', 'CEO'),
+    --Password: 2
+    ('two', 'two@mail.com', 'mi56cdL5Pu2e/1DS26UwKQ==', 'Scrub'),
+    --Password: user1PWD
+    ('user1', 'user1@rdmAddress.com', 'NAc2HuKefWN7hp/jMQglOQ==', 'Trader'),
+    --Password: password
+    ('test', 'test@mail.com', '/Eh8gAX4gQf8DHOul8A3Uw==', 'tester');
 
 INSERT INTO books
     (name, id)
@@ -43,7 +48,8 @@ VALUES
     (3, 1),
     (4, 1),
     (6, 1),
-    (2, 2);
+    (2, 2),
+    (6, 4);
 
 INSERT INTO counterparties
     (name)

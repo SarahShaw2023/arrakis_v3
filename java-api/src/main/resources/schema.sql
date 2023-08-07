@@ -95,12 +95,11 @@ ALTER TABLE book_users ADD PRIMARY KEY(book_id, user_id);
 
 --Create views/joined tables
 
-CREATE VIEW bondsWithClients as
-SELECT b.isin, b.cusip, b.bond_currency, b.face_value,
-       b.bond_maturity, b.coupon_percent, b.issuer_name,
-       b.status, b.type, c.id as client_id, c.name as client_name
-FROM bonds as b JOIN
-     trades as t ON b.isin = t.bond_id JOIN
+CREATE VIEW tradesWithClients as
+SELECT t.id, t.book_id, t.bond_id, t.type, t.currency, t.status,
+       t.quantity, t.unit_price, t.trade_date, t.settlement_date,
+       c.id as client_id, c.name as client_name
+FROM trades as t JOIN
      counterparties as c ON t.counterparty_id = c.id
 WHERE True;
 

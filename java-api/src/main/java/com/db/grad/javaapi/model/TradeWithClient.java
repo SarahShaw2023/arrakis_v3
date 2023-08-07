@@ -8,54 +8,47 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity@Immutable@Table(name="bondsWithClients")
-public class BondWithClient {
+public class TradeWithClient {
     //~Handles sql JOIN logic
-    //JOIN trade's bond_id ON bond's isin
     //JOIN trade's counterparty_id ON counterparty's id
 
-    //Bond fields
+    //Trade fields
     @Id
     @Column(insertable = false, updatable = false)
-    private String isin;
-    private int faceValue;
-    private float couponPercent;
-    private String cusip;
-    private String bondCurrency;
-    private String bondMaturity;
-    private String issuerName;
+    private int id;
+    private int book_id;
+    private String bond_id;
+    private int quantity;
+    private String currency;
     private String status;
     private String type;
+    private float unit_price;
+    private String trade_date;
+
+    private String settlement_date;
 
     //Trade fields
     private int clientId;
     private String clientName;
 
-    public String getIsin() {
-        return isin;
+    public int getId() {
+        return id;
     }
 
-    public int getFaceValue() {
-        return faceValue;
+    public int getBook_id() {
+        return book_id;
     }
 
-    public float getCouponPercent() {
-        return couponPercent;
+    public String getBond_id() {
+        return bond_id;
     }
 
-    public String getCusip() {
-        return cusip;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public String getBondCurrency() {
-        return bondCurrency;
-    }
-
-    public String getBondMaturity() {
-        return bondMaturity;
-    }
-
-    public String getIssuerName() {
-        return issuerName;
+    public String getCurrency() {
+        return currency;
     }
 
     public String getStatus() {
@@ -64,6 +57,18 @@ public class BondWithClient {
 
     public String getType() {
         return type;
+    }
+
+    public float getUnit_price() {
+        return unit_price;
+    }
+
+    public String getTrade_date() {
+        return trade_date;
+    }
+
+    public String getSettlement_date() {
+        return settlement_date;
     }
 
     public int getClientId() {
