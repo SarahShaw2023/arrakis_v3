@@ -110,7 +110,7 @@ export const Home = ({userID, setUserID}) => {
     }
   return (
     <>
-    <div className={"align-right"}>
+    <div className={"containerRight"}>
         <input type="button" onClick={onLogoutClick} value={"Logout"} className={"right"} />
       </div>
     <div>
