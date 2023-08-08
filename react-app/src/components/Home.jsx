@@ -113,7 +113,7 @@ export const Home = ({userID, setUserID}) => {
         <input type="button" onClick={onLogoutClick} value={"Logout"} className={"right"} />
       </div>
     <div>
-        <table>
+        <table style={{backgroundColor:"white"}}>
             <thead>
                 <tr><th colSpan="9">Bond Overview</th></tr>
             </thead>
@@ -137,7 +137,7 @@ export const Home = ({userID, setUserID}) => {
     </div>
     <div className={"space"}></div>
     <div>
-        <table>
+        <table style={{backgroundColor:"white"}}>
             <thead>
                 <tr><th colSpan="11">All Trades</th></tr>
             </thead>
@@ -166,7 +166,7 @@ export const Home = ({userID, setUserID}) => {
       <DatePicker dateFormat="dd/MM/yyyy" selected={date} onChange={(d) => {console.log(d.toISOString().split('T')[0]); setDate(d)}} />
     </div>
     <div>
-    <table>
+    <table style={{backgroundColor:"white"}}>
         <thead>
             <tr><th colSpan="9">View Bonds by Maturity</th></tr>
         </thead>
