@@ -36,15 +36,21 @@ const Login = ({userID, setUserID}) => {
         let pwd = CryptLogic.encryptStr(password); //password
         login(username, pwd)
             .then(res => {
-                console.log("Login response: " + res.data);
+                console.log("login response: " + res.data);
                 setUserID(res.data);
 
-                // window.location.replace('/home');
-                navigate("/home")
-                
+                if(res.data == -1) {
+                    setUsernameError("username not found");
+                }
+                else if(res.data == 0) {
+                    setPasswordError("incorrect password");
+                }
+                else {
+                    navigate("/home")
+                }
             })
             .catch(err => {
-                console.log("Login error response: " + err);
+                console.log("login error response: " + err);
                 setUserID(0);
         })
     }

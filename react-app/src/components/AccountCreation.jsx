@@ -105,7 +105,7 @@ const AccountCreation = () => {
                 <label className={"inputLabel"}>Password:</label>
                 <input
                     value={password}
-                    placeholder="(must be greater than 8 letters)"
+                    placeholder="password"
                     onChange={ev => setPassword(ev.target.value)}
                     className={"inputBox"} />
                 

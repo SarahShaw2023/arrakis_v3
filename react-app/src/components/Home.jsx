@@ -104,17 +104,16 @@ export const Home = ({userID, setUserID}) => {
         </tr>
     }
     const onLogoutClick = () => {
-        // navigate("/home");
-        window.location.replace('/home');
-        // TODO: clear out/reset user login info
+        setUserID(0)
+        navigate("/login");
     }
   return (
     <>
-    <div className={"align-right"}>
+    <div className={"containerRight"}>
         <input type="button" onClick={onLogoutClick} value={"Logout"} className={"right"} />
       </div>
     <div>
-        <table>
+        <table style={{backgroundColor:"white"}}>
             <thead>
                 <tr><th colSpan="9">Bond Overview</th></tr>
             </thead>
@@ -138,7 +137,7 @@ export const Home = ({userID, setUserID}) => {
     </div>
     <div className={"space"}></div>
     <div>
-        <table>
+        <table style={{backgroundColor:"white"}}>
             <thead>
                 <tr><th colSpan="11">All Trades</th></tr>
             </thead>
@@ -167,7 +166,7 @@ export const Home = ({userID, setUserID}) => {
       <DatePicker dateFormat="dd/MM/yyyy" selected={date} onChange={(d) => {console.log(d.toISOString().split('T')[0]); setDate(d)}} />
     </div>
     <div>
-    <table>
+    <table style={{backgroundColor:"white"}}>
         <thead>
             <tr><th colSpan="9">View Bonds by Maturity</th></tr>
         </thead>
